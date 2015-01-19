@@ -1,4 +1,4 @@
-package sv.algo.ch00.q0_3;
+package sv.algo.ch00.q0_3.cnw;
 
 public class ArrayRotate_cnw {
 	

@@ -1,6 +1,9 @@
+package sv.algo.ch00.q0_4.khj;
+
+
 import java.util.Scanner;
 
-public class algorhm_0_4_1
+public class Algorithm_BankWating_Queue
 {
     static int queueSize = 10;
     static int[] waitingQueue = new int[queueSize];
