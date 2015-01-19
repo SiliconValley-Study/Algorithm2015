@@ -1,26 +1,55 @@
 package sv.algo.ch00.q0_4;
 
+import java.util.Scanner;
+
 public class BankWatingNumber_CircularQueue {
 	
 	public static void main(String[] args) throws Exception {
 
-		CircularQueue circularQueue = new CircularQueue();
-
-		System.out.println("Init : " + circularQueue);
+		Scanner scanner = new Scanner(System.in);
 		
-		for(int i = 0; i < 5; i++){
-			circularQueue.enqueue(i);
-		}
+		boolean isRunning = true;
 		
-		System.out.println("Item Insert : " + circularQueue);
+		CircularQueue queue = new CircularQueue();
 		
-		for(int i = 0; i < 5; i++){
-			int val = circularQueue.dequeue();
+		while(isRunning){
 			
-			System.out.println(val);
+			System.out.print("[1.Enqueue, 2.DeQueue, 3.Exit] input : ");
+			String input = scanner.next();
+			
+			switch (input) {
+			case "1":
+				
+				System.out.print("숫자만 입력하세요. : ");
+				int num = Integer.parseInt(scanner.next());
+				queue.enqueue(num);
+				System.out.println(queue);
+				System.out.println();
+				break;
+				
+			case "2":
+				
+				int val = queue.dequeue();
+				System.out.println("dequeue num : " + val);
+				System.out.println(queue);
+				System.out.println();
+				
+				break;
+			case "3":
+				isRunning = false;
+				
+				break;
+
+			default:
+				
+				System.out.println("다시 입력해주셈");
+				continue;
+			}
+			
 		}
 		
-		System.out.println("Item Dequeue : " + circularQueue);
+		System.out.println(queue);
+		
 		
 	}
 
