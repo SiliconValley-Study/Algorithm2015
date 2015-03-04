@@ -25,9 +25,7 @@ public class PriceEvening {
 		}
 
 		if (price == 0) {
-
 			System.out.println(msg);
-
 			return 1;
 		}
 

@@ -25,8 +25,10 @@ public class Driver {
 				int num = Integer.parseInt(scanner.next());
 
 				queue.enqueue(num);
+
 				System.out.println();
 				System.out.println(queue);
+
 				break;
 
 			case "d":

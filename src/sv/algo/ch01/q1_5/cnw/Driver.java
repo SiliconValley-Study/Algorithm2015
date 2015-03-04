@@ -9,7 +9,7 @@ public class Driver {
 		int price = 100;
 
 		PriceEvening evening = new PriceEvening(bills, price);
-		// int cnt = evening.getTotalCalcCount();
+		// int cnt = evening.getTotalCalcCount();/
 
 		int cnt = evening.getTotalCalcCaseCount();
 

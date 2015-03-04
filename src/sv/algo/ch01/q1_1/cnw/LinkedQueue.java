@@ -63,8 +63,11 @@ public class LinkedQueue implements Queue {
 			result += node.data + ",";
 
 			return printNode(node.next, result);
+
 		} else {
+
 			return result + "]";
+
 		}
 
 	}
