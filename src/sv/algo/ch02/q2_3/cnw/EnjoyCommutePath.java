@@ -3,6 +3,10 @@ package sv.algo.ch02.q2_3.cnw;
 import java.util.HashMap;
 import java.util.Map;
 
+/*
+ * p.90 ~ 93
+ * 경로의 합이 제일 큰 경로와 그 합을 구하라
+ */
 public class EnjoyCommutePath {
 
 	public static void main(String[] args) {
@@ -64,9 +68,9 @@ public class EnjoyCommutePath {
 		int val = 0;
 
 		int upVal = getEnjoyCommuteWay(map, i - 1, j, memo);
-		int sideVal = getEnjoyCommuteWay(map, i, j - 1, memo);
+		int leftVal = getEnjoyCommuteWay(map, i, j - 1, memo);
 
-		val = upVal > sideVal ? upVal + map[i][j] : sideVal + map[i][j];
+		val = upVal > leftVal ? upVal + map[i][j] : leftVal + map[i][j];
 
 		memo.put(key, val);
 
